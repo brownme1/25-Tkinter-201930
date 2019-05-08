@@ -78,6 +78,12 @@ def main():
     #      s = entry_box.get()
     #      n = int(s)
     ####################################################################
+    Entry_box2 = ttk.Entry(frame)
+    Entry_box2.grid()
+
+    button3 = ttk.Button(frame, text='Button3')
+    button3['command'] = lambda : more_code(Entry_box)
+    button3.grid()
 
     # -------------------------------------------------------------------------
     # TODO: 8. As time permits, do other interesting GUI things!
@@ -88,11 +94,15 @@ def print_stuff():
     print('Hello')
 
 def other_code(Entry_Box):
-    if Entry_Box == 'ok':
+    if '' == 'ok':
         print('Hello')
     else:
         print('Goodbye')
 
+def more_code(Entry_box):
+    s = len(Entry_box)
+    n = int(s)
+    return n
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
